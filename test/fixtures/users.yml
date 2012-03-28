@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+admin:
+  first_name: Chat.App
+  last_name: Administrator
+  username: admin
+  email: admin@chatapp.com
+  password_digest: <%= BCrypt::Password.create('admin') %>
+
+patricio:
+  first_name: Patricio
+  last_name: Mac Adden
+  username: patriciomacadden
+  email: patriciomacadden@gmail.com
+  password_digest: <%= BCrypt::Password.create('patriciomacadden') %>

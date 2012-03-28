@@ -1,4 +1,13 @@
 Chatapp::Application.routes.draw do
+  resources :channels
+
+  get 'sign_in', to: 'sessions#new', as: :sign_in
+  delete 'sign_out', to: 'sessions#destroy', as: :sign_out
+  
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  root to: 'channels#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

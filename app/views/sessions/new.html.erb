@@ -1,0 +1,14 @@
+<h1>Sign in</h1>
+
+<%= simple_form_for :user, url: sessions_url do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :username %>
+    <%= f.input :password %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
