@@ -2,8 +2,10 @@
 
 hello:
   text: hello
+  channel: main
   user: patriciomacadden
 
 hi:
   text: hi
+  channel: main
   user: admin

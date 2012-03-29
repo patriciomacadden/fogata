@@ -5,6 +5,11 @@
   <%= @channel.name %>
 </p>
 
+<div id="messages">
+  <%= render @channel.messages %>
+</div>
+
+<%= render 'messages/form' %>
 
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
 <%= link_to 'Back', channels_path %>
