@@ -1,2 +1,3 @@
-$("#messages").append("<%= escape_javascript render(@message) %>");
-$("#new_message")[0].reset();
+<%= publish_to "/channels/#{@channel.name}/messages/new" do %>
+  $("#messages").append("<%=j render(@message) %>");
+<% end %>

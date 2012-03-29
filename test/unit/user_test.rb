@@ -34,4 +34,10 @@ class UserTest < ActiveSupport::TestCase
     
     assert_blank user.errors[:password]
   end
+  
+  test 'User#to_s should return user username' do
+    user = users(:admin)
+    
+    assert_equal user.username, user.to_s
+  end
 end

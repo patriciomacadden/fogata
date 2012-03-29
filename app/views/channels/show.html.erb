@@ -11,5 +11,7 @@
 
 <%= render 'messages/form' %>
 
+<%= subscribe_to "/channels/#{@channel.name}/messages/new" %>
+
 <%= link_to 'Edit', edit_channel_path(@channel) %> |
 <%= link_to 'Back', channels_path %>

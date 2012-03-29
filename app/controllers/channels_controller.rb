@@ -1,4 +1,6 @@
 class ChannelsController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /channels
   # GET /channels.json
   def index

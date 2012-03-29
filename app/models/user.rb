@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   
   # secure password
   has_secure_password
+  
+  def to_s
+    username
+  end
 end

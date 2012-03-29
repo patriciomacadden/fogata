@@ -6,7 +6,7 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
   test "should create message" do
-    session[:user_id] = users(:admin).id
+    sign_in users(:admin)
     
     assert_difference('Message.count') do
       xml_http_request :post, :create, channel_id: channels(:main).id, message: @message.attributes

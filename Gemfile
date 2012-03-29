@@ -38,3 +38,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git'
+gem 'private_pub'
+gem 'thin' # required by private_pub

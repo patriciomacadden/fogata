@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <% if user_signed_in? %>
+    Signed in as <%= current_user %>. <%= link_to 'Sign out', sign_out_path, method: :delete %>
+  <% end %>
 
 <% flash.each do |name, message| %>
   <div class="<%= name %>"><%= message %></div>
