@@ -1,3 +1,10 @@
-<div class="message">
-  <strong><%= message.user %> (<%= message.created_at %>)</strong>: <%= message.text %>
+<div id="message-<%= message.id %>" class="message">
+  <div class="gravatar">
+    <%= image_tag gravatar_url(message.user, 32) %>
+  </div>
+  <div class="meta">
+    <div class="user"><%= message.user %></div>
+    <div class="date"><%=l message.created_at %></div>
+  </div>
+  <div class="text"><pre><%= message.text %></pre></div>
 </div>

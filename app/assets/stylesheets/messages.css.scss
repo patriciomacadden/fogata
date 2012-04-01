@@ -1,0 +1,43 @@
+.message
+{
+  overflow: hidden;
+  margin: 5px 0;
+  
+  .gravatar
+  {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .meta
+  {
+    overflow: hidden;
+    font-size: 11px;
+    border-bottom: 1px solid #dedede;
+    
+    .user
+    {
+      float: left;
+    }
+    
+    .date
+    {
+      float: right;
+    }
+  }
+  
+  .text
+  {
+    margin-left: 44px;
+    
+    pre
+    {
+      background-color: #fff;
+      padding: 0 !important;
+      margin: 0 !important;
+      font-size: 13px;
+      color: #333;
+      font-family: verdana, arial, helvetica;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<div class="channel">
+  <h2><%= link_to channel.name, channel %></h2>
+  <%= link_to 'Edit', edit_channel_path(channel) %>
+  <%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %>
+</div>

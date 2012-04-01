@@ -18,4 +18,10 @@ class ChannelTest < ActiveSupport::TestCase
     assert channel.invalid?
     assert_equal 'has already been taken', channel.errors[:name].join
   end
+  
+  test 'Channel#pub_sub_name' do
+    channel = channels(:main)
+    
+    assert_equal "/channels/#{channel.id}/messages/new", channel.pub_sub_name
+  end
 end

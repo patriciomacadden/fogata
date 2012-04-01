@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Chatapp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  
-  <% if user_signed_in? %>
-    Signed in as <%= current_user %>. <%= link_to 'Sign out', sign_out_path, method: :delete %>
-  <% end %>
-
-<% flash.each do |name, message| %>
-  <div class="<%= name %>"><%= message %></div>
-<% end %>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>Smoke signals</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    
+    <%= render 'header' %>
+    
+    <div id="content">
+      <% flash.each do |name, message| %>
+        <div class="flash flash_<%= name %>"><%= message %></div>
+      <% end %>
+      
+      <%= yield %>
+    </div>
+    
+  </body>
 </html>

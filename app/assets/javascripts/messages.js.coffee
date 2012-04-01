@@ -4,4 +4,5 @@ $(document).ready ->
       $("#new_message").submit()
 
   $("#new_message").ajaxComplete ->
-    $("#new_message")[0].reset();
+    $("#new_message")[0].reset()
+    scrollToLastMessage()

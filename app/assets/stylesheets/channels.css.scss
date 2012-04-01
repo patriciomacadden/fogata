@@ -1,3 +1,45 @@
 // Place all the styles related to the channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#channel
+{
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+  
+  #messages
+  {
+    margin-top: 20px;
+  }
+  
+  #last_message
+  {
+    padding-bottom: 70px;
+  }
+  
+  #new_message
+  {
+    position: fixed;
+    bottom: 10px;
+
+    textarea
+    {
+      height: 50px;
+    }
+  }
+}
+
+#channel_info
+{
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  width: 27%;
+  text-align: left;
+  
+  h1
+  {
+    margin: 0;
+  }
+}

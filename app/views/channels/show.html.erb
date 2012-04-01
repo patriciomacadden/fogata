@@ -1,17 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @channel.name %>
-</p>
-
-<div id="messages">
-  <%= render @channel.messages %>
+<div id="channel">
+  <div id="messages">
+    <%= render @channel.messages %>
+  </div>
+  <div id="last_message">&nbsp;</div>
+  
+  <%= render 'messages/form' %>
 </div>
 
-<%= render 'messages/form' %>
+<div id="channel_info">
+  <h1><%= @channel.name %></h1>
+</div>
 
-<%= subscribe_to "/channels/#{@channel.name}/messages/new" %>
-
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+<%= subscribe_to @channel.pub_sub_name %>
+<script>
+  $('#header').addClass('fixed_header')
+</script>

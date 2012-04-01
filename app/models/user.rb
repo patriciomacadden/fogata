@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   has_secure_password
   
   def to_s
-    username
+    "#{first_name} #{last_name}"
   end
 end
