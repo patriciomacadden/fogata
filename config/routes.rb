@@ -1,16 +1,18 @@
 Chatapp::Application.routes.draw do
   resources :channels do
-    resources :messages, only: :create
+    resources :messages, only: [ :create ]
     
     member do
       put 'change_topic'
     end
   end
+  
+  resources :users, only: [ :edit, :update ]
 
   get 'sign_in', to: 'sessions#new', as: :sign_in
   delete 'sign_out', to: 'sessions#destroy', as: :sign_out
   
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [ :new, :create, :destroy ]
   
   root to: 'channels#index'
 

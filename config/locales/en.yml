@@ -14,6 +14,8 @@ en:
     sessions:
       successfully_signed_in: Successfully signed in.
       successfully_signed_out: Successfully signed out.
+    users:
+      your_profile_was_successfully_updated: Your profile was successfully updated.
   
   time:
     formats:
@@ -46,3 +48,8 @@ en:
     sessions:
       sign_in: Sign in
       sign_out: Sign out
+
+    users:
+      edit:
+        complete_it_only_if_you_want_to_change_it: Complete it only if you want to change it.
+        editing_profile: Editing profile
