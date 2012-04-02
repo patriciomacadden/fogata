@@ -6,6 +6,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Change topic' %> or <%= link_to_function 'Cancel', 'hideChangeTopicForm()' %>
+    <%= f.button :submit, t('views.channels.show.change_topic') %> <%=t 'views.common.or' %> <%= link_to_function t('views.common.cancel'), 'hideChangeTopicForm()' %>
   </div>
 <% end %>

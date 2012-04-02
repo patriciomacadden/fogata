@@ -2,9 +2,9 @@
   <h2><%= link_to channel.name, channel %></h2>
   <% if channel.current_topic.present? %>
     <div>
-      <strong>Current topic: </strong> <%= channel.current_topic %>
+      <strong><%=t 'activerecord.attributes.channel.current_topic' %>: </strong> <%= channel.current_topic %>
     </div>
   <% end %>
-  <%= link_to 'Edit', edit_channel_path(channel) %>
-  <%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %>
+  <%= link_to t('views.scaffold.edit'), edit_channel_path(channel) %>
+  <%= link_to t('views.scaffold.destroy'), channel, confirm: t('views.scaffold.are_you_sure'), method: :delete %>
 </div>

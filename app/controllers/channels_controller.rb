@@ -46,7 +46,7 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.save
-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+        format.html { redirect_to @channel, notice: I18n.t('controllers.channels.channel_was_successfully_created') }
         format.json { render json: @channel, status: :created, location: @channel }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.update_attributes(params[:channel])
-        format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
+        format.html { redirect_to @channel, notice: I18n.t('controllers.channels.channel_was_successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

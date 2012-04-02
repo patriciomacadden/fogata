@@ -2,4 +2,47 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      channel:
+        current_topic: Current topic
+  
+  controllers:
+    channels:
+      channel_was_successfully_created: Channel was succesfully created.
+      channel_was_successfully_updated: Channel was succesfully updated.
+    sessions:
+      successfully_signed_in: Successfully signed in.
+      successfully_signed_out: Successfully signed out.
+  
+  time:
+    formats:
+      short: '%b %e | %H:%M'
+      today_short: '%H:%M'
+  
+  views:
+    channels:
+      edit:
+        editing_channel: Editing channel
+      index:
+        channels: Channels
+        currently_there_are_no_channels: Currently there are no channels.
+      new:
+        new_channel: New channel
+      show:
+        change_topic: Change topic
+    
+    common:
+      cancel: Cancel
+      or: or
+    
+    scaffold:
+      are_you_sure: Are you sure?
+      back: Back
+      edit: Edit
+      destroy: Destroy
+      show: Show
+    
+    sessions:
+      sign_in: Sign in
+      sign_out: Sign out

@@ -1,0 +1,48 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  activerecord:
+    attributes:
+      channel:
+        current_topic: Tema actual
+  
+  controllers:
+    channels:
+      channel_was_successfully_created: El canal fue creado exitosamente.
+      channel_was_successfully_updated: El canal fue actualizado exitosamente.
+    sessions:
+      successfully_signed_in: Sesión iniciada exitosamente.
+      successfully_signed_out: Sesión cerrada exitosamente.
+  
+  time:
+    formats:
+      short: '%b %e | %H:%M'
+      today_short: '%H:%M'
+  
+  views:
+    channels:
+      edit:
+        editing_channel: Editando canal
+      index:
+        channels: Canales
+        currently_there_are_no_channels: Actualmente no hay ningún canal.
+      new:
+        new_channel: Nuevo canal
+      show:
+        change_topic: Cambiar tema
+    
+    common:
+      cancel: Cancelar
+      or: o
+    
+    scaffold:
+      are_you_sure: ¿Estás seguro?
+      back: Volver
+      edit: Editar
+      destroy: Eliminar
+      show: Ver
+    
+    sessions:
+      sign_in: Iniciar sesión
+      sign_out: Cerrar sesión

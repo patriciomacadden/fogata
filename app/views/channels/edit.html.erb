@@ -1,6 +1,6 @@
-<h1>Editing channel</h1>
+<h1><%=t 'views.channels.edit.editing_channel' %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @channel %> |
-<%= link_to 'Back', channels_path %>
+<%= link_to t('views.scaffold.show'), @channel %> |
+<%= link_to t('views.scaffold.back'), channels_path %>

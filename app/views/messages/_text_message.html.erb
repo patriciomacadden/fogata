@@ -4,7 +4,13 @@
   </div>
   <div class="meta">
     <div class="user"><%= message.user %></div>
-    <div class="date"><%=l message.created_at %></div>
+    <div class="date">
+      <% if message.created_at < Date.today %>
+        <%=l message.created_at, format: :short %>
+      <% else %>
+        <%=l message.created_at, format: :today_short %>
+      <% end %>
+    </div>
   </div>
   <div class="text"><pre><%= message.text %></pre></div>
 </div>
