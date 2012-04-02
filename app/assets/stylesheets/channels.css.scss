@@ -2,6 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1
+{
+  .actions
+  {
+    float: right;
+    font-size: 11px;
+  }
+}
+
+a.important
+{
+  color: #ff0000 !important;
+  
+  &:hover
+  {
+    background-color: #ff0000 !important;
+    color: #fff !important;
+  }
+}
+
+#channels_list
+{
+  .channel
+  {
+    border-top: 1px solid #dedede;
+    padding: 5px 0;
+    margin: 5px 0;
+
+    h2
+    {
+      margin: 0;
+
+      .actions
+      {
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+  }
+  
+  .channel:last-child
+  {
+    border-bottom: 1px solid #dedede;
+  }
+}
+
 #channel
 {
   margin-top: 10px;

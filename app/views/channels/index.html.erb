@@ -1,13 +1,9 @@
-<h1><%=t 'views.channels.index.channels' %></h1>
+<h1><%=t 'views.channels.index.channels' %> <span class="actions"><%= link_to t('views.channels.new.new_channel'), new_channel_path, class: 'important' %></span></h1>
 
 <% if @channels.any? %>
-  <%= render @channels %>
+  <div id="channels_list"><%= render @channels %></div>
 <% else %>
   <div>
     <%=t 'views.channels.index.currently_there_are_no_channels' %>
   </div>
 <% end %>
-
-<div class="actions">
-  <%= link_to t('views.channels.new.new_channel'), new_channel_path %>
-</div>

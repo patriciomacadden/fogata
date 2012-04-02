@@ -15,7 +15,7 @@
       <% if @channel.current_topic.present? %>
         <%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %>
       <% else %>
-        <%= link_to_function t('views.channels.show.add_a_topic'), 'showChangeTopicForm()' %>
+        <%= link_to_function t('views.channels.show.add_a_topic'), 'showChangeTopicForm()', class: 'important' %>
       <% end %>
     </span>
   </h2>
