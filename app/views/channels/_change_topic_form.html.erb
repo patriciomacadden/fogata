@@ -1,0 +1,11 @@
+<%= simple_form_for @channel, url: change_topic_channel_url, remote: true, html: { class: 'change_topic_channel' } do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :current_topic, label: false %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Change topic' %> or <%= link_to_function 'Cancel', 'hideChangeTopicForm()' %>
+  </div>
+<% end %>

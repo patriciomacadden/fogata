@@ -1,6 +1,10 @@
 Chatapp::Application.routes.draw do
   resources :channels do
     resources :messages, only: :create
+    
+    member do
+      put 'change_topic'
+    end
   end
 
   get 'sign_in', to: 'sessions#new', as: :sign_in

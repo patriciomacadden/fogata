@@ -4,8 +4,10 @@ hello:
   text: hello
   channel: main
   user: patriciomacadden
+  type: TextMessage
 
 hi:
   text: hi
   channel: main
   user: admin
+  type: TextMessage

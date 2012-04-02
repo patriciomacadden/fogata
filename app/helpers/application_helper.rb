@@ -1,6 +1,6 @@
 module ApplicationHelper
   def gravatar_url(user, size = 80, rating = 'g', default = nil)
-    gravatar_id = Digest::MD5.hexdigest user.email.downcase
+    gravatar_id = Digest::MD5.hexdigest user.email.downcase unless user.nil?
     
     params = Hash.new
     

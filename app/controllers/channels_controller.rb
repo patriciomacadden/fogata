@@ -82,4 +82,11 @@ class ChannelsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # PUT /channels/1/change_topic
+  def change_topic
+    @channel = Channel.find params[:id]
+    
+    @channel.change_topic current_user, params[:channel][:current_topic]
+  end
 end

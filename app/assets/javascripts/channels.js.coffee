@@ -8,6 +8,14 @@ window.calculateTextareaSize = ->
 window.scrollToLastMessage = ->
   $(window).scrollTop($('#last_message').position().top)
 
+window.showChangeTopicForm = ->
+  $('#change_topic_form').show()
+  $('h2#channel_current_topic').hide()
+
+window.hideChangeTopicForm = ->
+  $('#change_topic_form').hide()
+  $('h2#channel_current_topic').show()
+
 $(document).ready ->
   calculateTextareaSize()
   scrollToLastMessage()

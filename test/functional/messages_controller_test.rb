@@ -9,7 +9,7 @@ class MessagesControllerTest < ActionController::TestCase
     sign_in users(:admin)
     
     assert_difference('Message.count') do
-      xml_http_request :post, :create, channel_id: channels(:main).id, message: @message.attributes
+      xml_http_request :post, :create, channel_id: channels(:main).id, message: @message.attributes.reject { |k, v| ['id', 'type'].include? k }
     end
     
     assert_response :success

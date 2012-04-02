@@ -1,8 +1,8 @@
-<div id="header">
-  <h1><%= link_to 'Smoke signals', root_path %></h1>
-  <div id="user_nav">
-    <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div id="header">
+    <h1><%= link_to 'Smoke signals', root_path %></h1>
+    <div id="user_nav">
       <%= current_user %>. <%= link_to 'Sign out', sign_out_path, method: :delete %>
-    <% end %>
+    </div>
   </div>
-</div>
+<% end %>

@@ -63,4 +63,14 @@ class ChannelsControllerTest < ActionController::TestCase
 
     assert_redirected_to channels_path
   end
+  
+  test "should change topic" do
+    sign_in users(:admin)
+    
+    assert_difference('@channel.messages.count') do
+      xml_http_request :put, :change_topic, id: @channel, channel: { current_topic: 'Some new topic' }
+    end
+    
+    assert_response :success
+  end
 end

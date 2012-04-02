@@ -1,6 +1,6 @@
 <div id="channel">
   <div id="messages">
-    <%= render @channel.messages %>
+    <%= render partial: 'messages/message', collection: @channel.messages %>
   </div>
   <div id="last_message">&nbsp;</div>
   
@@ -8,7 +8,11 @@
 </div>
 
 <div id="channel_info">
-  <h1><%= @channel.name %></h1>
+  <h1 id="channel_name"><%= @channel.name %></h1>
+  <h2 id="channel_current_topic"><span id="topic"><%= @channel.current_topic %></span> <span id="change_topic"><%= link_to_function 'Change topic', 'showChangeTopicForm()' %></span></h2>
+  <div id="change_topic_form">
+    <%= render 'change_topic_form' %>
+  </div>
 </div>
 
 <%= subscribe_to @channel.pub_sub_name %>

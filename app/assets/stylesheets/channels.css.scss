@@ -21,7 +21,9 @@
   #new_message
   {
     position: fixed;
-    bottom: 10px;
+    bottom: -10px;
+    background-color: #fff;
+    padding: 20px 0;
 
     textarea
     {
@@ -38,8 +40,26 @@
   width: 27%;
   text-align: left;
   
-  h1
+  h1#channel_name
   {
     margin: 0;
+  }
+  
+  h2#channel_current_topic
+  {
+    font-size: 13px;
+    margin-top: 10px;
+    
+    span#change_topic
+    {
+      font-size: 11px;
+      font-weight: normal;
+    }
+  }
+  
+  #change_topic_form
+  {
+    display: none;
+    margin-top: 10px;
   }
 }

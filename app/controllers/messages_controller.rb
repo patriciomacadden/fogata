@@ -4,8 +4,10 @@ class MessagesController < ApplicationController
   
   # POST /channels/:channel_id/messages
   def create
+    # TODO: review this method
     @message = @channel.messages.build(params[:message])
     @message.user_id = current_user.id
+    @message.type = 'TextMessage'
     @message.save!
   end
   

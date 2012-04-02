@@ -1,0 +1,9 @@
+<div id="message-<%= message.id %>" class="change_topic_message">
+  <div class="meta">
+    <div class="gravatar">
+      <%= image_tag gravatar_url(message.user, 16) %>
+    </div>
+    <div class="current_topic"><%= message.text %></div>
+    <div class="date"><%=l message.created_at %></div>
+  </div>
+</div>
