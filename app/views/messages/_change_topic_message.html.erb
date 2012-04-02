@@ -3,7 +3,13 @@
     <div class="gravatar">
       <%= image_tag gravatar_url(message.user, 16) %>
     </div>
-    <div class="current_topic"><%= message.text %></div>
+    <div class="current_topic">
+      <% if message.text.present? %>
+        <%= message.text %>
+      <% else %>
+        <%=t 'views.messages.topic_cleared' %>
+      <% end %>
+    </div>
     <div class="date">
       <% if message.created_at < Date.today %>
         <%=l message.created_at, format: :short %>

@@ -9,7 +9,16 @@
 
 <div id="channel_info">
   <h1 id="channel_name"><%= @channel.name %></h1>
-  <h2 id="channel_current_topic"><span id="topic"><%= @channel.current_topic %></span> <span id="change_topic"><%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %></span></h2>
+  <h2 id="channel_current_topic">
+    <span id="topic"><%= @channel.current_topic %></span>
+    <span id="change_topic">
+      <% if @channel.current_topic.present? %>
+        <%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %>
+      <% else %>
+        <%= link_to_function t('views.channels.show.add_a_topic'), 'showChangeTopicForm()' %>
+      <% end %>
+    </span>
+  </h2>
   <div id="change_topic_form">
     <%= render 'change_topic_form' %>
   </div>

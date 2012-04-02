@@ -32,11 +32,15 @@ es:
       new:
         new_channel: Nuevo canal
       show:
+        add_a_topic: Agregar un tema
         change_topic: Cambiar tema
     
     common:
       cancel: Cancelar
       or: o
+    
+    messages:
+      topic_cleared: Tema eliminado.
     
     scaffold:
       are_you_sure: ¿Estás seguro?

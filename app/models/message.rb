@@ -4,7 +4,7 @@ class Message < ActiveRecord::Base
   belongs_to :user
   
   # validations
-  validates :text, presence: true
+  validates :text, presence: true, if: Proc.new { |message| message.type == 'TextMessage' }
   validates :channel_id, presence: true
   validates :user_id, presence: true
 end

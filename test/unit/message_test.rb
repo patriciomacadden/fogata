@@ -14,11 +14,11 @@ class MessageTest < ActiveSupport::TestCase
     assert_present message.errors[:user_id]
   end
   
-  test 'a new change topic message should have a text, a channel_id and a user_id' do
+  test 'a new change topic message a channel_id and a user_id' do
     message = ChangeTopicMessage.new
     
     assert message.invalid?
-    assert_present message.errors[:text]
+    assert_blank message.errors[:text]
     assert_present message.errors[:channel_id]
     assert_present message.errors[:user_id]
   end

@@ -32,11 +32,15 @@ en:
       new:
         new_channel: New channel
       show:
+        add_a_topic: Add a topic
         change_topic: Change topic
     
     common:
       cancel: Cancel
       or: or
+    
+    messages:
+      topic_cleared: Topic cleared.
     
     scaffold:
       are_you_sure: Are you sure?
