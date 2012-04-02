@@ -2,4 +2,5 @@
   $("#messages").append("<%=j render(partial: 'messages/message', object: @channel.messages.last) %>");
   hideChangeTopicForm();
   $("#channel_current_topic #topic").html("<%= @channel.current_topic %>");
+  scrollToLastMessage();
 <% end %>
