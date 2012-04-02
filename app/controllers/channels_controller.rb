@@ -16,6 +16,7 @@ class ChannelsController < ApplicationController
   # GET /channels/1.json
   def show
     @channel = Channel.find(params[:id])
+    authorize! :read, @channel
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,6 +28,8 @@ class ChannelsController < ApplicationController
   # GET /channels/new.json
   def new
     @channel = Channel.new
+    @channel.users << current_user
+    authorize! :create, @channel
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,12 +40,15 @@ class ChannelsController < ApplicationController
   # GET /channels/1/edit
   def edit
     @channel = Channel.find(params[:id])
+    authorize! :update, @channel
   end
 
   # POST /channels
   # POST /channels.json
   def create
     @channel = Channel.new(params[:channel])
+    @channel.user = current_user
+    authorize! :create, @channel
 
     respond_to do |format|
       if @channel.save
@@ -59,6 +65,7 @@ class ChannelsController < ApplicationController
   # PUT /channels/1.json
   def update
     @channel = Channel.find(params[:id])
+    authorize! :update, @channel
 
     respond_to do |format|
       if @channel.update_attributes(params[:channel])
@@ -75,6 +82,7 @@ class ChannelsController < ApplicationController
   # DELETE /channels/1.json
   def destroy
     @channel = Channel.find(params[:id])
+    authorize! :destroy, @channel
     @channel.destroy
 
     respond_to do |format|
@@ -86,6 +94,7 @@ class ChannelsController < ApplicationController
   # PUT /channels/1/change_topic
   def change_topic
     @channel = Channel.find params[:id]
+    authorize! :update, @channel
     
     @channel.change_topic current_user, params[:channel][:current_topic]
   end

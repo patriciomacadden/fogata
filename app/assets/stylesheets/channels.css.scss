@@ -101,11 +101,47 @@ a.important
       font-size: 11px;
       font-weight: normal;
     }
+    height: 60px;
+  }
+  
+  div#allowed_users
+  {
+    position: relative;
+    
+    h2
+    {
+      font-size: 13px;
+    }
+    
+    ul
+    {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li
+      {
+        font-size: 11px;
+        border-top: 1px solid #dedede;
+        padding: 2px 0;
+        
+        img
+        {
+          vertical-align: -4px;
+        }
+        
+        &:last-child
+        {
+          border-bottom: 1px solid #dedede;
+        }
+      }
+    }
   }
   
   #change_topic_form
   {
     display: none;
     margin-top: 10px;
+    height: 60px;
   }
 }

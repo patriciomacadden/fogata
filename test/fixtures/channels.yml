@@ -2,6 +2,8 @@
 
 main:
   name: Main
+  user: admin
 
 private:
   name: Private
+  user: admin

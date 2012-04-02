@@ -3,6 +3,7 @@ require 'test_helper'
 class ChannelsControllerTest < ActionController::TestCase
   setup do
     @channel = channels(:main)
+    @channel.users << users(:admin)
   end
 
   test "should get index" do

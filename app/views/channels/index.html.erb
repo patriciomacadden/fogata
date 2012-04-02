@@ -3,7 +3,5 @@
 <% if @channels.any? %>
   <div id="channels_list"><%= render @channels %></div>
 <% else %>
-  <div>
-    <%=t 'views.channels.index.currently_there_are_no_channels' %>
-  </div>
+  <div><%=t 'views.channels.index.currently_there_are_no_channels' %></div>
 <% end %>

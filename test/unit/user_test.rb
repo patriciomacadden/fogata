@@ -40,4 +40,65 @@ class UserTest < ActiveSupport::TestCase
     
     assert_equal "#{user.first_name} #{user.last_name}", user.to_s
   end
+  
+  test 'an user should be able to create a new channel' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    assert ability.can? :create, Channel.new
+  end
+  
+  test 'an user should not be able to update a channel if he(she) is not allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: users(:patricio)
+    
+    assert ability.cannot? :update, channel
+  end
+  
+  test 'an user should be able to update a channel if he(she) is allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: user
+    
+    assert ability.can? :update, channel
+  end
+  
+  test 'an user should not be able to read a channel if he(she) is not allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: users(:patricio)
+    
+    assert ability.cannot? :read, channel
+  end
+  
+  test 'an user should be able to read a channel if he(she) is allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: user
+    
+    assert ability.can? :read, channel
+  end
+  
+  test 'an user should not be able to destroy a channel if he(she) is not allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: users(:patricio)
+    
+    assert ability.cannot? :destroy, channel
+  end
+  
+  test 'an user should be able to destroy a channel if he(she) is allowed to' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    channel = Channel.create name: 'new channel', user: user
+    
+    assert ability.can? :destroy, channel
+  end
 end

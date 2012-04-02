@@ -24,4 +24,12 @@ class ChannelTest < ActiveSupport::TestCase
     
     assert_equal "/channels/#{channel.id}/messages/new", channel.pub_sub_name
   end
+  
+  test 'when a channel is created, the creator should be in the users collection' do
+    user = users(:admin)
+    channel = Channel.create name: 'New channel', user: user
+    
+    assert channel.valid?
+    assert channel.users.include? user
+  end
 end

@@ -23,4 +23,11 @@ en:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-
+    labels:
+      channel:
+        users: Allowed users
+    hints:
+      channel:
+        users: You are allowed by default.
+      user:
+        password: Complete it only if you want to change it.

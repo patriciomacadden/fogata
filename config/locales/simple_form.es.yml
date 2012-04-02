@@ -1,4 +1,4 @@
-en:
+es:
   simple_form:
     "yes": 'Sí'
     "no": 'No'
@@ -23,4 +23,11 @@ en:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-
+    labels:
+      channel:
+        users: Usuarios permitidos
+    hints:
+      channel:
+        users: Estás permitido por defecto.
+      user:
+        password: Completala sólo si querés cambiarla.
