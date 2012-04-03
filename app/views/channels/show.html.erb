@@ -10,7 +10,7 @@
 <div id="channel_info">
   <h1 id="channel_name"><%= @channel.name %></h1>
   <h2 id="channel_current_topic">
-    <span id="topic"><%= @channel.current_topic %></span>
+    <span id="topic"><%= emojize(@channel.current_topic).html_safe %></span>
     <span id="change_topic">
       <% if @channel.current_topic.present? %>
         <%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %>

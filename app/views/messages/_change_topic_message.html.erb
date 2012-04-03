@@ -5,7 +5,7 @@
     </div>
     <div class="current_topic">
       <% if message.text.present? %>
-        <%= message.text %>
+        <%= emojize(message.text).html_safe %>
       <% else %>
         <%=t 'views.messages.topic_cleared' %>
       <% end %>
