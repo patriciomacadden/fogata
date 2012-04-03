@@ -13,8 +13,8 @@ class ApplicationController < ActionController::Base
   private
   
   def set_locale_and_timezone
-    I18n.locale = current_user.locale if current_user.locale.present?
-    Time.zone = current_user.timezone if current_user.timezone.present?
+    I18n.locale = current_user.locale if current_user && current_user.locale.present?
+    Time.zone = current_user.timezone if current_user && current_user.timezone.present?
   end
   
   def current_user

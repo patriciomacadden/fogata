@@ -6,7 +6,8 @@ window.calculateTextareaSize = ->
   $('#new_message textarea').width($('#messages').width() - 6)
 
 window.scrollToLastMessage = ->
-  $(window).scrollTop($('#last_message').position().top)
+  if $('#last_message').size()
+    $(window).scrollTop($('#last_message').position().top)
 
 window.showChangeTopicForm = ->
   $('#change_topic_form').show()
