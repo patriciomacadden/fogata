@@ -1,0 +1,79 @@
+.simple_form
+{
+  div.input
+  {
+    margin-bottom: 10px;
+  }
+
+  label
+  {
+    float: left;
+    width: 160px;
+    text-align: right;
+    margin: 2px 10px;
+  }
+
+  .error
+  {
+    clear: left;
+    color: black;
+    display: block;
+    margin-left: 180px;
+    font-size: 12px;
+  }
+
+  .hint
+  {
+    clear: left;
+    margin-left: 180px;
+    font-size: 12px;
+    color: #555;
+    display: block;
+    font-style: italic;
+  }
+}
+
+div.boolean,
+.simple_form input[type='submit']
+{
+  margin-left: 180px;
+}
+
+div.boolean label,
+label.collection_radio
+{
+  float: none;
+  margin: 0;
+}
+
+label.collection_radio
+{
+  margin-right: 10px;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+.field_with_errors
+{
+  background-color: #ff3333;
+}
+
+input.radio
+{
+  margin-right: 5px;
+  vertical-align: -3px;
+}
+
+input.checkbox
+{
+  margin-left: 3px;
+  vertical-align: -3px;
+}
+
+label.checkbox
+{
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
