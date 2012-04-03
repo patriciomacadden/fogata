@@ -25,7 +25,13 @@ es:
     #     password: 'No special characters, please.'
     labels:
       channel:
+        name: Nombre
         users: Usuarios permitidos
+      user:
+        locale: Idioma
+        password: Contraseña
+        password_confirmation: Repetir contraseña
+        timezone: Zona horaria
     hints:
       channel:
         users: Estás permitido por defecto.

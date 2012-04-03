@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
+  before_filter :set_locale_and_timezone
+  
   helper_method :current_user
   helper_method :user_signed_in?
   
@@ -9,6 +11,11 @@ class ApplicationController < ActionController::Base
   end
   
   private
+  
+  def set_locale_and_timezone
+    I18n.locale = current_user.locale if current_user.locale.present?
+    Time.zone = current_user.timezone if current_user.timezone.present?
+  end
   
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]

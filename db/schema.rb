@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402194837) do
+ActiveRecord::Schema.define(:version => 20120403000234) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20120402194837) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "locale"
+    t.string   "timezone"
   end
 
 end

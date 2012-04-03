@@ -17,6 +17,14 @@ en:
     users:
       your_profile_was_successfully_updated: Your profile was successfully updated.
   
+  helpers:
+    submit:
+      channel:
+        create: Create channel
+        update: Update channel
+      user:
+        update: Update profile
+  
   time:
     formats:
       short: '%b %e | %H:%M'

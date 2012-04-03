@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true, on: :create
   
   # accessible attributes
-  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :locale, :timezone
   
   # secure password
   has_secure_password
