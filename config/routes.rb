@@ -1,4 +1,4 @@
-Chatapp::Application.routes.draw do
+SmokeSignals::Application.routes.draw do
   resources :channels do
     resources :messages, only: [ :create ]
     

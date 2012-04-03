@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Chatapp::Application.load_tasks
+SmokeSignals::Application.load_tasks

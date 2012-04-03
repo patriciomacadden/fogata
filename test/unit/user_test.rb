@@ -24,7 +24,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test 'saved password should be encrypted' do
-    user = User.create! first_name: 'User', last_name: 'User', username: 'user', email: 'user@chatapp.com', password: 'user'
+    user = User.create! first_name: 'User', last_name: 'User', username: 'user', email: 'user@smoke_signals.com', password: 'user'
     
     assert_not_equal user.password, user.password_digest
   end
