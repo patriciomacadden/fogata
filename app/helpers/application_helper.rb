@@ -18,4 +18,16 @@ module ApplicationHelper
     
     "http://gravatar.com/avatar/#{gravatar_id}.png?#{params.to_query}"
   end
+  
+  def emojize(text)
+    text.gsub(/:\w+:/) do |s|
+      img_path = "emojis/#{s.gsub(':', '')}.png"
+      
+      if FileTest.exist? "#{Rails.root}/app/assets/images/#{img_path}"
+        image_tag img_path, class: 'emoji'
+      else
+        s
+      end
+    end
+  end
 end
