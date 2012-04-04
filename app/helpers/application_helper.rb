@@ -30,4 +30,15 @@ module ApplicationHelper
       end
     end
   end
+
+  def replace_urls(text)
+    text.gsub(/https?:\/\/[\S]+/) do |s|
+      link_to s, s, target: '_blank'
+    end
+  end
+
+  def messageize(text)
+    text = emojize(text)
+    text = replace_urls(text)
+  end
 end
