@@ -17,6 +17,12 @@ window.hideChangeTopicForm = ->
   $('#change_topic_form').hide()
   $('h2#channel_current_topic').show()
 
+window.imOnline = (channel_id) ->
+  setInterval(->
+    url = '/channels/'+channel_id+'/im_online'
+    $.post url, { _method: 'put' }
+  , 5000)
+
 $(document).ready ->
   calculateTextareaSize()
   scrollToLastMessage()

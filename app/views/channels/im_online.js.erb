@@ -1,0 +1,9 @@
+<%= publish_to @channel.im_online_name do %>
+  $("#online_users ul li").detach();
+  <% @channel.online_users.each do |user| %>
+    if ($("#online_users ul li#user-<%= user.id %>").size() == 0)
+    {
+      $("#online_users ul").append("<%=j render(partial: 'users/user_li', collection: @channel.online_users, as: 'user') %>");
+    }
+  <% end %>
+<% end %>

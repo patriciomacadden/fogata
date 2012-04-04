@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   # associations
   has_and_belongs_to_many :channels, uniq: true
-  has_many :channels
   has_many :messages
+  has_many :onlines
+  has_many :online_channels, through: :onlines, source: :channel
   
   # validations
   validates :first_name, presence: true

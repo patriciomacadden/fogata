@@ -4,6 +4,7 @@ SmokeSignals::Application.routes.draw do
     
     member do
       put 'change_topic'
+      put 'im_online'
     end
   end
   

@@ -39,11 +39,13 @@ en:
       index:
         channels: Channels
         currently_there_are_no_channels: Currently there are no channels.
+        there_are_no_online_users: There are no online users
       new:
         new_channel: New channel
       show:
         add_a_topic: Add a topic
         change_topic: Change topic
+        online_users: Online users
     
     common:
       cancel: Cancel

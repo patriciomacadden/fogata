@@ -5,6 +5,11 @@ class ChannelsController < ApplicationController
   # GET /channels.json
   def index
     @channels = Channel.all
+    
+    @channels.each do |channel|
+      # delete all online users from the last 5 seconds
+      channel.onlines.where('created_at <= ? OR user_id = ?', 5.seconds.ago, current_user.id).delete_all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +22,12 @@ class ChannelsController < ApplicationController
   def show
     @channel = Channel.find(params[:id])
     authorize! :read, @channel
+    
+    # delete all online users from the last 5 seconds
+    @channel.onlines.where('created_at <= ? OR user_id = ?', 5.seconds.ago, current_user.id).delete_all
+    
+    # add the current_user
+    @channel.online_users << current_user
 
     respond_to do |format|
       format.html # show.html.erb
@@ -97,5 +108,16 @@ class ChannelsController < ApplicationController
     authorize! :update, @channel
     
     @channel.change_topic current_user, params[:channel][:current_topic]
+  end
+  
+  # PUT /channels/1/im_online
+  def im_online
+    @channel = Channel.find params[:id]
+    
+    # delete all online users from the last 5 seconds
+    @channel.onlines.where('created_at <= ? OR user_id = ?', 5.seconds.ago, current_user.id).delete_all
+    
+    # add the current_user
+    @channel.online_users << current_user
   end
 end

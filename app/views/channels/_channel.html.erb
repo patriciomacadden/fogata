@@ -12,4 +12,11 @@
       <strong><%=t 'activerecord.attributes.channel.current_topic' %>: </strong> <%= messageize(channel.current_topic).html_safe unless channel.current_topic.nil? %>
     </div>
   <% end %>
+  <div>
+    <% if channel.online_users.any? %>
+      <%= channel.online_users.join(',') %>
+    <% else %>
+      <%=t 'views.channels.index.there_are_no_online_users' %>
+    <% end %>
+  </div>
 </div>

@@ -3,5 +3,7 @@ $(document).ready ->
     if (event.which == 13 && event.shiftKey == false)
       $("#new_message").submit()
 
-  $("#new_message").ajaxComplete ->
-    $("#new_message")[0].reset()
+  $("#new_message").ajaxComplete (e, xhr, settings) ->
+    regexp = /\/channels\/\d+\/messages/
+    if regexp.test(settings.url)
+      $(this)[0].reset()

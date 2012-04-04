@@ -3,6 +3,8 @@ class Channel < ActiveRecord::Base
   belongs_to :user
   has_and_belongs_to_many :users, uniq: true
   has_many :messages, dependent: :destroy
+  has_many :onlines
+  has_many :online_users, through: :onlines, source: :user
   
   # callbacks
   after_create :allow_creator
@@ -12,6 +14,10 @@ class Channel < ActiveRecord::Base
   
   def pub_sub_name
     "/channels/#{id}/messages/new"
+  end
+  
+  def im_online_name
+    "/channels/#{id}/im_online"
   end
   
   def change_topic(user, new_topic)

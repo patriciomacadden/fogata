@@ -74,4 +74,14 @@ class ChannelsControllerTest < ActionController::TestCase
     
     assert_response :success
   end
+  
+  test "should say i'm online" do
+    sign_in users(:admin)
+    
+    assert_difference('@channel.onlines.count') do
+      xml_http_request :put, :im_online, id: @channel
+    end
+    
+    assert_response :success
+  end
 end

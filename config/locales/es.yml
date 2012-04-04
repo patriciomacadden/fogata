@@ -39,11 +39,13 @@ es:
       index:
         channels: Canales
         currently_there_are_no_channels: Actualmente no hay ningún canal.
+        there_are_no_online_users: No hay usuarios online
       new:
         new_channel: Nuevo canal
       show:
         add_a_topic: Agregar un tema
         change_topic: Cambiar tema
+        online_users: Usuarios online
     
     common:
       cancel: Cancelar
