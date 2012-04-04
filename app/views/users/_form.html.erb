@@ -16,8 +16,10 @@
     <%= f.input :locale, collection: I18n.available_locales %>
     <%= f.input :timezone, as: :time_zone %>
     
-    <legend><%=t 'views.users.form.permissions' %></legend>
-    <%= f.input :admin %>
+    <% if current_user.admin? %>
+      <legend><%=t 'views.users.form.permissions' %></legend>
+      <%= f.input :admin %>
+    <% end %>
   </div>
 
   <div class="form-actions">
