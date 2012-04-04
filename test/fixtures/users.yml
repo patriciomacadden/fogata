@@ -6,6 +6,9 @@ admin:
   username: admin
   email: admin@smoke_signals.com
   password_digest: <%= BCrypt::Password.create('admin') %>
+  locale: es
+  timezone: Buenos Aires
+  admin: true
 
 patricio:
   first_name: Patricio
@@ -13,3 +16,6 @@ patricio:
   username: patriciomacadden
   email: patriciomacadden@gmail.com
   password_digest: <%= BCrypt::Password.create('patriciomacadden') %>
+  locale: es
+  timezone: Buenos Aires
+  admin: false

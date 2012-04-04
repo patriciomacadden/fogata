@@ -14,17 +14,19 @@ class UserTest < ActiveSupport::TestCase
     assert_present user.errors[:username]
     assert_present user.errors[:email]
     assert_present user.errors[:password]
+    assert_present user.errors[:locale]
+    assert_present user.errors[:timezone]
   end
   
   test 'an user should have an unique username' do
-    user = User.create first_name: users(:admin).first_name, last_name: users(:admin).last_name, username: users(:admin).username, email: users(:admin).email, password: users(:admin).password
+    user = User.create first_name: users(:admin).first_name, last_name: users(:admin).last_name, username: users(:admin).username, email: users(:admin).email, password: users(:admin).password, locale: users(:admin).locale, timezone: users(:admin).timezone
     
     assert user.invalid?
     assert_equal 'has already been taken', user.errors[:username].join(';')
   end
   
   test 'saved password should be encrypted' do
-    user = User.create! first_name: 'User', last_name: 'User', username: 'user', email: 'user@smoke_signals.com', password: 'user'
+    user = User.create! first_name: 'User', last_name: 'User', username: 'user', email: 'user@smoke_signals.com', password: 'user', locale: users(:admin).locale, timezone: users(:admin).timezone
     
     assert_not_equal user.password, user.password_digest
   end
@@ -100,5 +102,33 @@ class UserTest < ActiveSupport::TestCase
     channel = Channel.create name: 'new channel', user: user
     
     assert ability.can? :destroy, channel
+  end
+  
+  test 'an admin user should be able to manage users' do
+    user = users(:admin)
+    ability = Ability.new(user)
+    
+    assert ability.can? :manage, User
+  end
+  
+  test 'a non admin user should not be able to manage users' do
+    user = users(:patricio)
+    ability = Ability.new(user)
+    
+    assert ability.cannot? :manage, User
+  end
+  
+  test 'an user should be able to update himself' do
+    user = users(:patricio)
+    ability = Ability.new(user)
+    
+    assert ability.can? :update, user
+  end
+  
+  test 'an user should not be able to update other user' do
+    user = users(:patricio)
+    ability = Ability.new(user)
+    
+    assert ability.cannot? :update, users(:admin)
   end
 end

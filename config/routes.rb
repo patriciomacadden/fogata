@@ -7,7 +7,7 @@ SmokeSignals::Application.routes.draw do
     end
   end
   
-  resources :users, only: [ :edit, :update ]
+  resources :users, except: [ :show ]
 
   get 'sign_in', to: 'sessions#new', as: :sign_in
   delete 'sign_out', to: 'sessions#destroy', as: :sign_out

@@ -1,0 +1,5 @@
+<h1><%=t 'views.users.index.listing_users' %> <span class="actions"><%= link_to t('views.users.new.new_user'), new_user_path, class: 'important' %></span></h1>
+
+<div id="users_list">
+  <%= render @users %>
+</div>

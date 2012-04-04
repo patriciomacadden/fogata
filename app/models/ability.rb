@@ -37,5 +37,10 @@ class Ability
     can :destroy, Channel do |channel|
       channel.users.include? user
     end
+    
+    can :manage, User if user.admin?
+    can :update, User do |u|
+      user == u
+    end
   end
 end

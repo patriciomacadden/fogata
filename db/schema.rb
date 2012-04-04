@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403000234) do
+ActiveRecord::Schema.define(:version => 20120404022218) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20120403000234) do
     t.datetime "updated_at",      :null => false
     t.string   "locale"
     t.string   "timezone"
+    t.boolean  "admin"
   end
 
 end

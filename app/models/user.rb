@@ -10,9 +10,11 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true
   validates :password, presence: true, on: :create
+  validates :locale, presence: true
+  validates :timezone, presence: true
   
   # accessible attributes
-  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :locale, :timezone
+  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :locale, :timezone, :admin
   
   # secure password
   has_secure_password

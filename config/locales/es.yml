@@ -15,7 +15,8 @@ es:
       successfully_signed_in: Sesión iniciada exitosamente.
       successfully_signed_out: Sesión cerrada exitosamente.
     users:
-      your_profile_was_successfully_updated: Tu perfil fue actualizado exitosamente.
+      user_was_successfully_created: El usuario fue creado exitosamente.
+      user_was_successfully_updated: El usuario fue actualizado exitosamente.
   
   helpers:
     submit:
@@ -23,7 +24,8 @@ es:
         create: Crear canal
         update: Actualizar canal
       user:
-        update: Actualizar perfil
+        create: Crear usuario
+        update: Actualizar usuario
   
   time:
     formats:
@@ -46,6 +48,7 @@ es:
     common:
       cancel: Cancelar
       or: o
+      users: Usuarios
     
     messages:
       topic_cleared: Tema eliminado.
@@ -63,4 +66,13 @@ es:
     
     users:
       edit:
-        editing_profile: Editando perfil
+        editing_user: Editando usuario
+      form:
+        localization: Localización
+        permissions: Permisos
+        personal_information: Información personal
+        user_information: Información de usuario
+      index:
+        listing_users: Listando usuarios
+      new:
+        new_user: Nuevo usuario

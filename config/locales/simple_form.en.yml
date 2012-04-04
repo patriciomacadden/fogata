@@ -29,5 +29,3 @@ en:
     hints:
       channel:
         users: You are allowed by default.
-      user:
-        password: Complete it only if you want to change it.

@@ -28,12 +28,13 @@ es:
         name: Nombre
         users: Usuarios habilitados
       user:
+        first_name: Nombre
+        last_name: Apellido
         locale: Idioma
         password: Contraseña
         password_confirmation: Repetir contraseña
+        username: Nombre de usuario
         timezone: Zona horaria
     hints:
       channel:
         users: Estás permitido por defecto.
-      user:
-        password: Completala sólo si querés cambiarla.

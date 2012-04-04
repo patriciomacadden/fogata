@@ -15,7 +15,8 @@ en:
       successfully_signed_in: Successfully signed in.
       successfully_signed_out: Successfully signed out.
     users:
-      your_profile_was_successfully_updated: Your profile was successfully updated.
+      user_was_successfully_created: User was successfully created.
+      user_was_successfully_updated: User was successfully updated.
   
   helpers:
     submit:
@@ -23,7 +24,8 @@ en:
         create: Create channel
         update: Update channel
       user:
-        update: Update profile
+        create: Create user
+        update: Update user
   
   time:
     formats:
@@ -46,6 +48,7 @@ en:
     common:
       cancel: Cancel
       or: or
+      users: Users
     
     messages:
       topic_cleared: Topic cleared.
@@ -63,4 +66,13 @@ en:
 
     users:
       edit:
-        editing_profile: Editing profile
+        editing_user: Editing user
+      form:
+        localization: Localization
+        permissions: Permissions
+        personal_information: Personal information
+        user_information: User information
+      index:
+        listing_users: Listing users
+      new:
+        new_user: New user
