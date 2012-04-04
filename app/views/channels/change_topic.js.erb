@@ -1,7 +1,7 @@
 <%= publish_to @channel.pub_sub_name do %>
   $("#messages").append("<%=j render(partial: 'messages/message', object: @channel.messages.last) %>");
   hideChangeTopicForm();
-  $("#channel_current_topic #topic").html("<%=j emojize(@channel.current_topic).html_safe %>");
+  $("#channel_current_topic #topic").html("<%=j emojize(@channel.current_topic).html_safe unless @channel.current_topic.nil? %>");
   scrollToLastMessage();
   <% if @channel.current_topic.present? %>
     $("#change_topic a").html("<%=t 'views.channels.show.change_topic' %>");

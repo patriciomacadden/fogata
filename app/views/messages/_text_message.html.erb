@@ -12,5 +12,5 @@
       <% end %>
     </div>
   </div>
-  <div class="text"><pre><%= emojize(message.text).html_safe %></pre></div>
+  <div class="text"><pre><%= emojize(message.text).html_safe unless message.text.nil? %></pre></div>
 </div>

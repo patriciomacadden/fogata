@@ -9,7 +9,7 @@
   </h2>
   <% if channel.current_topic.present? %>
     <div>
-      <strong><%=t 'activerecord.attributes.channel.current_topic' %>: </strong> <%= emojize(channel.current_topic).html_safe %>
+      <strong><%=t 'activerecord.attributes.channel.current_topic' %>: </strong> <%= emojize(channel.current_topic).html_safe unless channel.current_topic.nil? %>
     </div>
   <% end %>
 </div>
