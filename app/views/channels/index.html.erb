@@ -1,3 +1,5 @@
+<% title t('views.channels.index.channels') %>
+
 <h1><%=t 'views.channels.index.channels' %> <span class="actions"><%= link_to t('views.channels.new.new_channel'), new_channel_path, class: 'important' %></span></h1>
 
 <% if @channels.any? %>

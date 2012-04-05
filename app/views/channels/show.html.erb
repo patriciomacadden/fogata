@@ -1,3 +1,5 @@
+<% title @channel.name %>
+
 <div id="channel">
   <div id="messages">
     <%= render partial: 'messages/message', collection: @channel.messages %>

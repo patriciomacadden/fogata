@@ -41,4 +41,8 @@ module ApplicationHelper
     text = emojize(text)
     text = replace_urls(text)
   end
+  
+  def title(page_title)
+    content_for :title, page_title
+  end
 end
