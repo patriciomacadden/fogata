@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.page(params[:page])
     authorize! :read, User
 
     respond_to do |format|

@@ -41,3 +41,4 @@ gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git'
 gem 'private_pub'
 gem 'thin' # required by private_pub
 gem 'cancan'
+gem 'kaminari'

@@ -61,6 +61,12 @@ es:
     messages:
       topic_cleared: Tema eliminado.
     
+    pagination:
+      first: Primera
+      last: Última
+      next: Siguiente
+      previous: Anterior
+    
     scaffold:
       are_you_sure: ¿Estás seguro?
       back: Volver

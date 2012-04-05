@@ -4,7 +4,7 @@ class ChannelsController < ApplicationController
   # GET /channels
   # GET /channels.json
   def index
-    @channels = Channel.all
+    @channels = Channel.page(params[:page])
     
     @channels.each do |channel|
       # delete all online users from the last 5 seconds
