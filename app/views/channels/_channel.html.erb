@@ -14,7 +14,7 @@
   <% end %>
   <div>
     <% if channel.online_users.any? %>
-      <%= channel.online_users.join(',') %>
+      <%= channel.online_users.join(', ') %>
     <% else %>
       <%=t 'views.channels.index.there_are_no_online_users' %>
     <% end %>

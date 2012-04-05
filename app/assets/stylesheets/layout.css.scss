@@ -3,6 +3,31 @@ body
   margin: 0;
 }
 
+a
+{
+  &:visited
+  {
+    color: #000 !important;
+  }
+  
+  &:hover
+  {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
+}
+
+a.important
+{
+  color: #ff0000 !important;
+  
+  &:hover
+  {
+    background-color: #ff0000 !important;
+    color: #fff !important;
+  }
+}
+
 #header
 {
   background-color: #333;
@@ -22,7 +47,7 @@ body
       
       &:hover
       {
-        background-color: #333;
+        background-color: #333 !important;
       }
     }
   }
@@ -33,9 +58,16 @@ body
     margin-right: 10px;
     font-size: 11px;
     
-    a:hover
+    a
     {
-      background-color: #333;
+      color: #fff !important;
+      text-decoration: none;
+      
+      &:hover
+      {
+        background-color: #333 !important;
+        text-decoration: underline;
+      }
     }
   }
 }
