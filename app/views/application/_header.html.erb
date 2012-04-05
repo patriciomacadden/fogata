@@ -2,10 +2,14 @@
   <div id="header">
     <h1><%= link_to 'Smoke signals', root_path %></h1>
     <div id="user_nav">
-      <% if can? :manage, User %>
-        <%= link_to t('views.common.users'), users_path %> |
-      <% end %>
-      <%= link_to current_user, edit_user_path(current_user) %>. <%= link_to t('views.sessions.sign_out'), sign_out_path, method: :delete %>
+      <ul>
+        <%= render partial: 'users/user_li', object: current_user, as: 'user' %>
+        <% if can? :manage, User %>
+          <li><%= link_to t('views.common.users'), users_path %></li>
+        <% end %>
+        <li><%= link_to t('views.common.my_profile'), edit_user_path(current_user) %></li>
+        <li><%= link_to t('views.sessions.sign_out'), sign_out_path, method: :delete %></li>
+      </ul>
     </div>
   </div>
 <% end %>

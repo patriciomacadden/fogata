@@ -40,7 +40,7 @@ class UserTest < ActiveSupport::TestCase
   test 'User#to_s should return user first name and user last name' do
     user = users(:admin)
     
-    assert_equal "#{user.first_name} #{user.last_name}", user.to_s
+    assert_equal "#{user.first_name} #{user.last_name.first}.", user.to_s
   end
   
   test 'an user should be able to create a new channel' do

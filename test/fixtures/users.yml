@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 admin:
-  first_name: Chat.App
+  first_name: Smoke signals
   last_name: Administrator
   username: admin
   email: admin@smoke_signals.com
