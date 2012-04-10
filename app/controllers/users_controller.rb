@@ -56,7 +56,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to users_url, notice: I18n.t('controllers.users.user_was_successfully_updated') }
+        if current_user.admin?
+          format.html { redirect_to users_url, notice: I18n.t('controllers.users.user_was_successfully_updated') }
+        else
+          format.html { redirect_to edit_user_url(@user), notice: I18n.t('controllers.users.user_was_successfully_updated') }
+        end
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
