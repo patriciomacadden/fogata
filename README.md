@@ -42,7 +42,7 @@ git clone git@github.com:patriciomacadden/smoke_signals.git
 * API (maybe using [grape](https://github.com/intridea/grape)?)
 * Themeable interface (maybe using [themes_for_rails](https://github.com/lucasefe/themes_for_rails)?)
 * Search
-* File management in channels
+* File management in channels (maybe using [carrierwave](https://github.com/jnicklas/carrierwave))
 * Improve the authorization on controllers (not so good use of [cancan](https://github.com/ryanb/cancan))
 
 ## License
