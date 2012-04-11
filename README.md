@@ -1,6 +1,6 @@
 # Smoke signals
 
-Smoke signals is an open source organization group chat. Basically, Smoke signals is an open source [Campfire](http://campfirenow.com/) clone.
+Smoke signals is an open source group chat. Basically, Smoke signals is an open source [Campfire](http://campfirenow.com/) clone.
 
 ## Main features
 
@@ -16,14 +16,15 @@ Smoke signals is an open source organization group chat. Basically, Smoke signal
 git clone git@github.com:patriciomacadden/smoke_signals.git
 ```
 2. Run `bundle install` to install the dependencies
-3. Configure your databases in config/database.yml
-4. Run `gem install foreman` to install the [foreman](https://github.com/ddollar/foreman) gem
-5. Run `bundle exec rake db:create` to create the database
-6. Run `bundle exec rake db:migrate` to create the database schema
-7. Run `bundle exec rake db:seed` to create the admin user
-8. Run `foreman start` to start the background processes
-9. Run `rails server` to start the rails server
-10. Visit localhost:3000 to start using Smoke signals!
+3. Configure your databases in `config/database.yml`
+4. Configure where you will run the [faye](https://github.com/faye/faye) process in `config/private_pub.yml` (using [private_pub](https://github.com/ryanb/private_pub), of course)
+5. Run `gem install foreman` to install the [foreman](https://github.com/ddollar/foreman) gem
+6. Run `bundle exec rake db:create` to create the database
+7. Run `bundle exec rake db:migrate` to create the database schema
+8. Run `bundle exec rake db:seed` to create the admin user
+9. Run `foreman start` to start the background processes
+10. Run `rails server` to start the rails server
+11. Visit localhost:3000 to start using Smoke signals!
 
 ## Contributing
 
