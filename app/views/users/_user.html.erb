@@ -1,6 +1,6 @@
 <div class="user">
   <h2>
-    <%= user %>
+    <%= "#{user.first_name} #{user.last_name}" %>
     <span class="actions">
       <%= link_to t('views.scaffold.edit'), edit_user_path(user), class: 'important' %>
       <%=t 'views.common.or' %>
