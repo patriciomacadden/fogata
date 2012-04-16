@@ -12,6 +12,11 @@ class Channel < ActiveRecord::Base
   
   # validations
   validates :name, presence: true, uniqueness: true
+  validates :slug, presence: true, uniqueness: true
+  
+  # friendly_id
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   
   def pub_sub_name
     "/channels/#{id}/messages/new"

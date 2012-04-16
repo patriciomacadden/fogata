@@ -14,9 +14,14 @@ class User < ActiveRecord::Base
   validates :password, presence: true, on: :create
   validates :locale, presence: true
   validates :timezone, presence: true
+  validates :slug, presence: true, uniqueness: true
+  
+  # friendly_id
+  extend FriendlyId
+  friendly_id :username, use: :slugged
   
   # accessible attributes
-  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :locale, :timezone, :admin
+  attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :locale, :timezone, :admin, :slug
   
   # secure password
   has_secure_password

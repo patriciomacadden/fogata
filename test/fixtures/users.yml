@@ -9,13 +9,15 @@ admin:
   locale: es
   timezone: Buenos Aires
   admin: true
+  slug: admin
 
 patricio:
   first_name: Patricio
   last_name: Mac Adden
-  username: patriciomacadden
+  username: patricio
   email: patriciomacadden@gmail.com
   password_digest: <%= BCrypt::Password.create('patriciomacadden') %>
   locale: es
   timezone: Buenos Aires
   admin: false
+  slug: patricio

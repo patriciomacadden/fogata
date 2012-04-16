@@ -16,6 +16,7 @@ class UserTest < ActiveSupport::TestCase
     assert_present user.errors[:password]
     assert_present user.errors[:locale]
     assert_present user.errors[:timezone]
+    assert_present user.errors[:slug]
   end
   
   test 'an user should have an unique username' do

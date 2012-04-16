@@ -5,15 +5,16 @@ class ChannelTest < ActiveSupport::TestCase
   #   assert true
   # end
   
-  test 'a new channel should have a name' do
+  test 'a new channel should have a name and a slug' do
     channel = Channel.new
     
     assert channel.invalid?
     assert_present channel.errors[:name]
+    assert_present channel.errors[:slug]
   end
   
   test 'a new channel should have an unique name' do
-    channel = Channel.create name: channels(:main).name
+    channel = Channel.create name: channels(:main).name, user: channels(:main).user
     
     assert channel.invalid?
     assert_equal 'has already been taken', channel.errors[:name].join

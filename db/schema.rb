@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120414210553) do
+ActiveRecord::Schema.define(:version => 20120416015423) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(:version => 20120414210553) do
     t.datetime "updated_at",    :null => false
     t.string   "current_topic"
     t.integer  "user_id"
+    t.string   "slug"
   end
+
+  add_index "channels", ["slug"], :name => "index_channels_on_slug", :unique => true
 
   create_table "channels_users", :force => true do |t|
     t.integer  "channel_id"
@@ -73,6 +76,9 @@ ActiveRecord::Schema.define(:version => 20120414210553) do
     t.string   "locale"
     t.string   "timezone"
     t.boolean  "admin"
+    t.string   "slug"
   end
+
+  add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
 
 end
