@@ -7,6 +7,7 @@ Smoke signals is an open source group chat. Basically, Smoke signals is an open 
 * [Gravatar](http://gravatar.com/) support
 * Emoji support, following [emoji-cheat-sheet](http://www.emoji-cheat-sheet.com/)
 * URL conversion support (if you write http://google.com it turns to [http://google.com](http://google.com))
+* File uploads
 * .. and many more to come!
 
 ## Quick start
@@ -46,6 +47,7 @@ git clone git@github.com:patriciomacadden/smoke_signals.git
 * File deletion (maybe in the transcript)
 * Improve the authorization on controllers (not so good use of [cancan](https://github.com/ryanb/cancan))
 * Add permalinks for channels and users (so the generated urls are more human friendly)
+* Allow mp3 uploads
 
 ## License
 
