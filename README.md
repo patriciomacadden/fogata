@@ -36,7 +36,7 @@ git clone git@github.com:patriciomacadden/smoke_signals.git
 
 ## Pending features
 
-* Improve styles, for God's sake!
+* Improve default style, for God's sake!
 * Authentication using [devise](https://github.com/plataformatec/devise) or [omniauth](https://github.com/intridea/omniauth)? (Would it be nice?)
 * Sounds!
 * API (maybe using [grape](https://github.com/intridea/grape)?)
