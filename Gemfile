@@ -42,3 +42,5 @@ gem 'private_pub'
 gem 'thin' # required by private_pub
 gem 'cancan'
 gem 'kaminari'
+gem 'carrierwave'
+gem 'rmagick'

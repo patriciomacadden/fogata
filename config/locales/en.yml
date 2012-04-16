@@ -23,6 +23,8 @@ en:
       channel:
         create: Create channel
         update: Update channel
+      upload:
+        create: Upload a file
       user:
         create: Create user
         update: Update user
@@ -46,6 +48,8 @@ en:
         add_a_topic: Add a topic
         change_topic: Change topic
         online_users: Online users
+        upload_a_file: Upload a file
+        uploads: Uploads
     
     common:
       cancel: Cancel

@@ -29,6 +29,8 @@ es:
       channel:
         create: Crear canal
         update: Actualizar canal
+      upload:
+        create: Subir archivo
       user:
         create: Crear usuario
         update: Actualizar usuario
@@ -52,6 +54,8 @@ es:
         add_a_topic: Agregar un tema
         change_topic: Cambiar tema
         online_users: Usuarios online
+        upload_a_file: Subir un archivo
+        uploads: Archivos
     
     common:
       cancel: Cancelar

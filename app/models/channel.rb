@@ -3,8 +3,9 @@ class Channel < ActiveRecord::Base
   belongs_to :user
   has_and_belongs_to_many :users, uniq: true
   has_many :messages, dependent: :destroy
-  has_many :onlines
+  has_many :onlines, dependent: :destroy
   has_many :online_users, through: :onlines, source: :user
+  has_many :uploads, dependent: :destroy
   
   # callbacks
   after_create :allow_creator

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  upload: a_test_png.png
+  user: admin
+  channel: main
+
+two:
+  upload: another_test_png.png
+  user: admin
+  channel: main

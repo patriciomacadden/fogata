@@ -109,7 +109,7 @@ class UsersControllerTest < ActionController::TestCase
     sign_in users(:patricio)
 
     put :update, id: users(:patricio), user: users(:patricio).attributes.reject { |key, value| ['id', 'password_digest', 'created_at', 'updated_at'].include? key }
-    assert_redirected_to users_path
+    assert_redirected_to edit_user_path(users(:patricio))
   end
   
   test "non admin user should not update user (other user)" do

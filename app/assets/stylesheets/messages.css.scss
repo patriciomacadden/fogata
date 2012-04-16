@@ -49,9 +49,9 @@
 {
   overflow: hidden;
   margin: 5px 0;
-  background-color: #FCF8E3;
-  border-top: 1px solid #FBEED5;
-  border-bottom: 1px solid #FBEED5;
+  background-color: #fcf8e3;
+  border-top: 1px solid #fbeed5;
+  border-bottom: 1px solid #fbeed5;
   padding: 0 5px;
   
   .meta
@@ -73,6 +73,62 @@
     .date
     {
       float: right;
+    }
+  }
+}
+
+.upload_message
+{
+  overflow: hidden;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #fcf8e3;
+  border-top: 1px solid #fbeed5;
+  border-bottom: 1px solid #fbeed5;
+  
+  .gravatar
+  {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .meta
+  {
+    overflow: hidden;
+    font-size: 11px;
+    border-bottom: 1px solid #dedede;
+    
+    .user
+    {
+      float: left;
+      margin-top: -2px;
+    }
+    
+    .date
+    {
+      float: right;
+      margin-top: -2px;
+    }
+  }
+  
+  .upload
+  {
+    margin-left: 44px;
+    padding-top: 5px;
+    
+    .download
+    {
+      margin-bottom: 5px;
+      
+      img
+      {
+        vertical-align: text-top;
+      }
+    }
+    
+    a.img:hover
+    {
+      background: none !important;
     }
   }
 }

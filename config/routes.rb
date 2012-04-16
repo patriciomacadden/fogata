@@ -1,6 +1,7 @@
 SmokeSignals::Application.routes.draw do
   resources :channels do
     resources :messages, only: [ :create ]
+    resources :uploads, only: [ :create ]
     
     member do
       put 'change_topic'

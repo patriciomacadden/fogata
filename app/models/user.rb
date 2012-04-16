@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :messages
   has_many :onlines
   has_many :online_channels, through: :onlines, source: :channel
+  has_many :uploads
   
   # validations
   validates :first_name, presence: true

@@ -23,6 +23,16 @@ window.imOnline = (channel_id) ->
     $.post url, { _method: 'put' }
   , 5000)
 
+window.showUploadForm = ->
+  $('#upload_form').show()
+  $('#show_upload_form').toggle()
+  $('#hide_upload_form').toggle()
+
+window.hideUploadForm = ->
+  $('#upload_form').hide()
+  $('#show_upload_form').toggle()
+  $('#hide_upload_form').toggle()
+
 $(document).ready ->
   calculateTextareaSize()
   scrollToLastMessage()

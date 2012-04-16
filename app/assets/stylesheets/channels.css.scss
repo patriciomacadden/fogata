@@ -128,6 +128,60 @@ h1
     }
   }
   
+  div#uploads
+  {
+    h2
+    {
+      font-size: 13px;
+      
+      span#upload_actions
+      {
+        font-size: 11px;
+        float: right;
+        
+        a
+        {
+          font-weight: normal;
+        }
+        
+        a#hide_upload_form
+        {
+          display: none;
+        }
+      }
+    }
+    
+    div#upload_form
+    {
+      display: none;
+      margin-bottom: 10px;
+    }
+    
+    ul
+    {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li
+      {
+        font-size: 11px;
+        border-top: 1px solid #dedede;
+        padding: 2px 0;
+        
+        img
+        {
+          vertical-align: -4px;
+        }
+        
+        &:last-child
+        {
+          border-bottom: 1px solid #dedede;
+        }
+      }
+    }
+  }
+  
   #change_topic_form
   {
     display: none;

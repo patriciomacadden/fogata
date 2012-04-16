@@ -11,18 +11,21 @@
 
 <div id="channel_info">
   <h1 id="channel_name"><%= @channel.name %></h1>
-  <h2 id="channel_current_topic">
-    <span id="topic"><%= messageize(@channel.current_topic).html_safe unless @channel.current_topic.nil? %></span>
-    <span id="change_topic">
-      <% if @channel.current_topic.present? %>
-        <%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %>
-      <% else %>
-        <%= link_to_function t('views.channels.show.add_a_topic'), 'showChangeTopicForm()', class: 'important' %>
-      <% end %>
-    </span>
-  </h2>
-  <div id="change_topic_form">
-    <%= render 'change_topic_form' %>
+
+  <div id="topic">
+    <h2 id="channel_current_topic">
+      <span id="topic"><%= messageize(@channel.current_topic).html_safe unless @channel.current_topic.nil? %></span>
+      <span id="change_topic">
+        <% if @channel.current_topic.present? %>
+          <%= link_to_function t('views.channels.show.change_topic'), 'showChangeTopicForm()' %>
+        <% else %>
+          <%= link_to_function t('views.channels.show.add_a_topic'), 'showChangeTopicForm()', class: 'important' %>
+        <% end %>
+      </span>
+    </h2>
+    <div id="change_topic_form">
+      <%= render 'change_topic_form' %>
+    </div>
   </div>
   
   <div id="online_users">
@@ -36,6 +39,22 @@
     <h2><%=t 'simple_form.labels.channel.users' %></h2>
     <ul>
       <%= render partial: 'users/user_li', collection: @channel.users, as: 'user' %>
+    </ul>
+  </div>
+  
+  <div id="uploads">
+    <h2>
+      <%=t 'views.channels.show.uploads' %>
+      <span id="upload_actions">
+        <%= link_to_function t('views.channels.show.upload_a_file'), 'showUploadForm()', id: 'show_upload_form' %>
+        <%= link_to_function t('views.common.cancel'), 'hideUploadForm()', id: 'hide_upload_form', class: 'important' %>
+      </span>
+    </h2>
+    <div id="upload_form">
+      <%= render 'uploads/form' %>
+    </div>
+    <ul>
+      <%= render partial: 'uploads/upload_li', collection: @channel.uploads.latest, as: 'upload' %>
     </ul>
   </div>
 </div>
