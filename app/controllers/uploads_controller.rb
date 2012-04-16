@@ -10,8 +10,6 @@ class UploadsController < ApplicationController
     if @upload.valid?
       @upload.save!
     end
-    
-    redirect_to @channel
   end
 
   # DELETE /uploads/1

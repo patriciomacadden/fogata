@@ -1,0 +1,14 @@
+<% remotipart_response do %>
+  <%= publish_to @channel.pub_sub_name do %>
+    $("#messages").append("<%=j render(partial: 'messages/upload_message', object: @channel.messages.last, as: 'message') %>");
+    scrollToLastMessage();
+    
+    $("#uploads ul li").detach();
+    <% @channel.uploads.latest.each do |upload| %>
+      if ($("#uploads ul li#upload-<%= upload.id %>").size() == 0)
+      {
+        $("#uploads ul").append("<%=j render(partial: 'uploads/upload_li', collection: @channel.uploads.latest, as: 'upload') %>");
+      }
+    <% end %>
+  <% end %>
+<% end %>

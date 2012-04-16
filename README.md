@@ -34,7 +34,7 @@ git clone git@github.com:patriciomacadden/smoke_signals.git
 4. Push to the branch (`git push origin my_awesome_branch`)
 5. Send pull request
 
-## Issues / Pending features
+## Pending features
 
 * Improve styles, for God's sake!
 * Authentication using [devise](https://github.com/plataformatec/devise) or [omniauth](https://github.com/intridea/omniauth)? (Would it be nice?)
@@ -42,7 +42,8 @@ git clone git@github.com:patriciomacadden/smoke_signals.git
 * API (maybe using [grape](https://github.com/intridea/grape)?)
 * Themeable interface (maybe using [themes_for_rails](https://github.com/lucasefe/themes_for_rails)?)
 * Search
-* File management in channels (maybe using [carrierwave](https://github.com/jnicklas/carrierwave))
+* Transcript (messages by day)
+* File deletion (maybe in the transcript)
 * Improve the authorization on controllers (not so good use of [cancan](https://github.com/ryanb/cancan))
 * Add permalinks for channels and users (so the generated urls are more human friendly)
 
