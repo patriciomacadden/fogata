@@ -1,0 +1,31 @@
+# Sample localization file for Spanish (Argentina). Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es-AR:
+  activerecord:
+    attributes:
+      channel:
+        current_topic: Tema actual
+        name: Nombre
+
+  helpers:
+    submit:
+      channel:
+        create: Crear canal
+        update: Actualizar canal
+
+  views:
+    application:
+      smoke_signals: Smoke Signals
+
+    channels:
+      editing_channel: Editar canal
+      listing_channels: Canales
+      new_channel: Nuevo canal
+
+    scaffold:
+      are_you_sure: ¿Estás seguro?
+      back_html: <i class="icon-arrow-left"></i> Volver
+      edit_html: <i class="icon-pencil"></i> Editar
+      destroy_html: <i class="icon-trash"></i> Eliminar
+      show: Ver

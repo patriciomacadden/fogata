@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>
+    <%=t 'views.channels.listing_channels' %>
+    <%= link_to t('views.channels.new_channel'), new_channel_path, class: 'btn btn-mini pull-right' %>
+  </h1>
+</div>
+
+<% if @channels.any? %>
+  <div class="channels"><%= render @channels %></div>
+<% else %>
+  <div class="alert"><%=t 'views.channels.there_are_no_channels' %></div>
+<% end %>

@@ -1,4 +1,8 @@
 SmokeSignals::Application.routes.draw do
+  resources :channels
+  
+  root to: 'channels#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

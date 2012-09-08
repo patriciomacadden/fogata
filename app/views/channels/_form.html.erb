@@ -1,0 +1,11 @@
+<%= simple_form_for(@channel, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn-small' %>
+  </div>
+<% end %>

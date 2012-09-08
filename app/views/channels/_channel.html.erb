@@ -1,0 +1,13 @@
+<div class="boxed-item">
+  <div class="info">
+    <div class="left">
+      <strong><%= channel.name %></strong> <span class="muted"><%= channel.current_topic %></span>
+    </div>
+  </div>
+  
+  <div class="actions">
+    <%= link_to t('views.scaffold.show'), channel %>
+    <%= link_to t('views.scaffold.edit_html'), edit_channel_path(channel) %>
+    <%= link_to t('views.scaffold.destroy_html'), channel, method: :delete, data: { confirm: t('views.scaffold.are_you_sure') } %>
+  </div>
+</div>

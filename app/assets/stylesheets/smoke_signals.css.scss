@@ -1,0 +1,27 @@
+.boxed-item
+{
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+
+  .info
+  {
+    overflow: hidden;
+
+    .left
+    {
+      float: left;
+    }
+
+    .right
+    {
+      float: right;
+    }
+  }
+
+  .actions
+  {
+    font-size: 12px;
+
+    a { margin-right: 10px; }
+  }
+}
