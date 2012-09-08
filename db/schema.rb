@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908201504) do
+ActiveRecord::Schema.define(:version => 20120908224122) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -19,9 +19,17 @@ ActiveRecord::Schema.define(:version => 20120908201504) do
     t.string   "slug"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
   end
 
   add_index "channels", ["name"], :name => "index_channels_on_name", :unique => true
   add_index "channels", ["slug"], :name => "index_channels_on_slug", :unique => true
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

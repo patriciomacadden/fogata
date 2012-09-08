@@ -1,4 +1,6 @@
 class ChannelsController < ApplicationController
+  before_filter :authenticate_user!
+  
   respond_to :html, :json
   
   # GET /channels
@@ -36,6 +38,7 @@ class ChannelsController < ApplicationController
   # POST /channels.json
   def create
     @channel = Channel.new(params[:channel])
+    @channel.user = current_user
     flash[:notice] = t('controllers.channels.channel_was_successfully_created') if @channel.save
 
     respond_with @channel
