@@ -9,6 +9,8 @@ SmokeSignals::Application.routes.draw do
     end
   end
   
+  get 'transcripts_and_search', to: 'channels#transcripts_and_search'
+  
   resources :users, except: [ :show ]
 
   get 'sign_in', to: 'sessions#new', as: :sign_in

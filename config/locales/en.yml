@@ -50,6 +50,8 @@ en:
         online_users: Online users
         upload_a_file: Upload a file
         uploads: Uploads
+      transcripts_and_search:
+        transcripts_and_search: Transcripts and search
     
     common:
       cancel: Cancel

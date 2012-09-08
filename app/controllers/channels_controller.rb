@@ -120,4 +120,13 @@ class ChannelsController < ApplicationController
     # add the current_user
     @channel.online_users << current_user
   end
+  
+  # GET /transcripts_and_search
+  # GET /transcripts_and_search.json
+  def transcripts_and_search
+    #respond_to do |format|
+    #  format.html # transcripts_and_search.html.erb
+    #  format.json { render json: @channels }
+    #end
+  end
 end
