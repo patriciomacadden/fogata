@@ -1,7 +1,0 @@
-<%= simple_form_for([@channel, @channel.messages.build], remote: true) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :text, label: false %>
-  </div>
-<% end %>

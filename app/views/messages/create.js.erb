@@ -1,4 +1,0 @@
-<%= publish_to @channel.pub_sub_name do %>
-  $("#messages").append("<%=j render(@message) %>");
-  scrollToLastMessage();
-<% end %>

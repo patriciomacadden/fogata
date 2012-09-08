@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-main:
-  name: Main
-  user: admin
-
-private:
-  name: Private
-  user: admin
