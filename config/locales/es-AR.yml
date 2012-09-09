@@ -8,6 +8,14 @@ es-AR:
         current_topic: Tema actual
         name: Nombre
 
+  controllers:
+    channels:
+      channel_was_successfully_created: El canal fue creado exitosamente.
+      channel_was_successfully_updated: El canal fue actualizado exitosamente.
+    sessions:
+      successfully_signed_in: Sesión iniciada exitosamente.
+      successfully_signed_out: Sesión finalizada exitosamente.
+
   helpers:
     submit:
       channel:
