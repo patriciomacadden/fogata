@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   # associations
   has_many :channels
+  has_many :messages
 
   # validations
   validates :email, presence: true

@@ -1,0 +1,10 @@
+<div class="well" style="padding: 8px 0">
+  <ul class="nav nav-list">
+    <li class="nav-header"><%= @channel.name %></li>
+    <li><%= link_to t('views.scaffold.edit_html'), edit_channel_path(@channel) %></li>
+    <li><%= link_to t('views.scaffold.back_html'), channels_path %></li>
+    <li class="divider"></li>
+    <li class="nav-header"><%=t 'activerecord.attributes.channel.current_topic' %></li>
+    <li><%= @channel.current_topic.present? ? @channel.current_topic : t('views.channels.without_current_topic') %></li>
+  </ul>
+</div>

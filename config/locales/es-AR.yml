@@ -31,6 +31,10 @@ es-AR:
       listing_channels: Canales
       new_channel: Nuevo canal
       there_are_no_channels: No hay canales
+      without_current_topic: Sin tema actual
+
+    navbar:
+      sign_out: Cerrar sesión
 
     scaffold:
       are_you_sure: ¿Estás seguro?

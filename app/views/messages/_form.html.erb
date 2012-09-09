@@ -1,0 +1,3 @@
+<%= simple_form_for([@channel, @message], remote: true, html: { class: 'form-inline' }) do |f| %>
+  <%= f.input :text, label: false, input_html: { class: 'span9', rows: 3 } %>
+<% end %>

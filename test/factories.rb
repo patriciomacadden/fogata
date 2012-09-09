@@ -4,7 +4,13 @@ FactoryGirl.define do
     current_topic 'Some random topic'
     user
   end
-  
+
+  factory :message do
+    channel
+    text 'Some random text'
+    user
+  end
+
   factory :user do
     sequence(:email) { |n| "user#{n}@gmail.com" }
     sequence(:first_name) { |n| "Name #{n}" }

@@ -1,6 +1,5 @@
 class ChannelsController < ApplicationController
   before_filter :authenticate_user!
-  
   respond_to :html, :json
   
   # GET /channels
@@ -15,6 +14,7 @@ class ChannelsController < ApplicationController
   # GET /channels/channel-1.json
   def show
     @channel = Channel.find(params[:id])
+    @message = Message.new
 
     respond_with @channel
   end
