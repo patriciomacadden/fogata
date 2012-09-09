@@ -6,7 +6,9 @@ class Channel < ActiveRecord::Base
 
   # associations
   belongs_to :user
+  has_many :current_topic_change_messages
   has_many :messages
+  has_many :text_messages
 
   # friendly_id
   friendly_id :name, use: :slugged

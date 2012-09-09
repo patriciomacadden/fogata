@@ -1,0 +1,13 @@
+<div class="text-message boxed-item">
+  <div class="info">
+    <div class="left">
+      <strong><%= text_message.user.first_name %></strong>
+    </div>
+    <div class="right">
+      <span class="muted"><%=l text_message.created_at, format: :short %></span>
+    </div>
+  </div>
+  <div class="text_message">
+    <%= text_message.text %>
+  </div>
+</div>

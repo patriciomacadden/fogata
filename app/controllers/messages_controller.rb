@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   # POST /channels/channel-1/messages
   # POST /channels/channel-1/messages.json
   def create
-    @message = @channel.messages.new(params[:message])
+    @message = @channel.text_messages.new(params[:message])
     @message.user = current_user
     @message.save!
     respond_with @message, location: @channel

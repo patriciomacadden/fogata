@@ -1,0 +1,2 @@
+class CurrentTopicChangeMessage < Message
+end

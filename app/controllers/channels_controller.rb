@@ -67,6 +67,7 @@ class ChannelsController < ApplicationController
   def change_current_topic
     @channel = Channel.find(params[:id])
     @channel.update_attributes(params[:channel])
+    @message = @channel.current_topic_change_messages.create text: @channel.current_topic, user: current_user
 
     respond_with @channel
   end
