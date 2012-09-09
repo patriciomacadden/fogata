@@ -1,7 +1,7 @@
 <div class="current-topic-change-message boxed-item">
   <div class="info">
     <div class="left">
-      <strong><%= current_topic_change_message.text %></strong>
+      <strong><%= current_topic_change_message.text.present? ? current_topic_change_message.text : t('views.messages.current_topic_removed') %></strong>
     </div>
     <div class="right">
       <strong><%= current_topic_change_message.user.first_name %></strong> - <span class="muted"><%=l current_topic_change_message.created_at, format: :short %></span>

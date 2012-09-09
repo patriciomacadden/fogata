@@ -8,7 +8,7 @@ class Message < ActiveRecord::Base
 
   # validations
   validates :channel_id, presence: true
-  validates :text, presence: true
+  validates :text, presence: true, if: lambda { |message| message.type == 'TextMessage' }
   validates :user_id, presence: true
   
   def to_partial_path

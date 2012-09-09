@@ -35,6 +35,9 @@ es-AR:
       there_are_no_channels: No hay canales
       without_current_topic: Sin tema actual
 
+    messages:
+      current_topic_removed: Tema eliminado
+
     navbar:
       sign_out: Cerrar sesión
 
