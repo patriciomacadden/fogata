@@ -22,6 +22,7 @@ es-AR:
       editing_channel: Editar canal
       listing_channels: Canales
       new_channel: Nuevo canal
+      there_are_no_channels: No hay canales
 
     scaffold:
       are_you_sure: ¿Estás seguro?
