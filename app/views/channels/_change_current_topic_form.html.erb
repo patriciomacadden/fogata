@@ -1,0 +1,13 @@
+<%= simple_form_for(@channel, url: change_current_topic_channel_path(@channel), remote: true, html: { class: 'form-horizontal', style: 'margin-bottom: 0' }) do |f| %>
+  <div class="modal-body">
+    <%= f.error_notification %>
+    
+    <div class="form-inputs">
+      <%= f.input :current_topic %>
+    </div>
+  </div>
+  
+  <div class="modal-footer">
+    <%= f.button :submit %>
+  </div>
+<% end %>

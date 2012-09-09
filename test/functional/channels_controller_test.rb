@@ -83,4 +83,9 @@ class ChannelsControllerTest < ActionController::TestCase
 
     assert_redirected_to channels_path
   end
+  
+  test "should change current topic" do
+    put :change_current_topic, id: @channel, channel: { current_topic: 'A new topic' }, format: :js
+    assert_response :success
+  end
 end

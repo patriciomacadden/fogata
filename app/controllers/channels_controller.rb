@@ -1,6 +1,6 @@
 class ChannelsController < ApplicationController
   before_filter :authenticate_user!
-  respond_to :html, :json
+  respond_to :html, :js, :json
   
   # GET /channels
   # GET /channels.json
@@ -58,6 +58,15 @@ class ChannelsController < ApplicationController
   def destroy
     @channel = Channel.find(params[:id])
     @channel.destroy
+
+    respond_with @channel
+  end
+
+  # PUT /channels/channel-1/change_current_topic
+  # PUT /channels/channel-1/change_current_topic.json
+  def change_current_topic
+    @channel = Channel.find(params[:id])
+    @channel.update_attributes(params[:channel])
 
     respond_with @channel
   end

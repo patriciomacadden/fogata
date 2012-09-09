@@ -4,6 +4,10 @@ SmokeSignals::Application.routes.draw do
   
   resources :channels do
     resources :messages, only: [:create]
+    
+    member do
+      put 'change_current_topic'
+    end
   end
   
   root to: 'channels#index'

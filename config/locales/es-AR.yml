@@ -27,6 +27,8 @@ es-AR:
       smoke_signals: Smoke Signals
 
     channels:
+      change_topic: Cambiar tema
+      change_topic_html: <i class="icon-tag"></i> Cambiar tema
       editing_channel: Editar canal
       listing_channels: Canales
       new_channel: Nuevo canal
