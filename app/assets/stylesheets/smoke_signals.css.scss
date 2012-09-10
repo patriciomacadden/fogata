@@ -1,3 +1,8 @@
+img.emoji
+{
+  vertical-align: top;
+}
+
 .boxed-item
 {
   border-bottom: 1px solid #eee;
@@ -16,11 +21,6 @@
     {
       float: right;
     }
-  }
-  
-  img
-  {
-    vertical-align: top;
   }
 
   .actions
