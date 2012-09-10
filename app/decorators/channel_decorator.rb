@@ -1,5 +1,6 @@
 class ChannelDecorator < Draper::Base
   decorates :channel
+  decorates_association :messages
 
   # Accessing Helpers
   #   You can access any helper via a proxy
@@ -29,4 +30,8 @@ class ChannelDecorator < Draper::Base
   #     h.content_tag :span, attributes["created_at"].strftime("%a %m/%d/%y"),
   #                   :class => 'timestamp'
   #   end
+
+  def current_topic
+    h.emojize(h.replace_urls(channel.current_topic)).html_safe
+  end
 end

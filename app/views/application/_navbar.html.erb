@@ -5,7 +5,9 @@
       
       <ul class="nav pull-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> <%= current_user %> <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= image_tag gravatar_url(current_user.email, 16), class: 'img-rounded', style: 'margin-top: -4px' %> <%= current_user %> <b class="caret"></b>
+          </a>
           <ul class="dropdown-menu">
             <li><%= link_to t('views.navbar.sign_out'), sign_out_path %></li>
           </ul>

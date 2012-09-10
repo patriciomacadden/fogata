@@ -8,12 +8,14 @@ class MessagesController < ApplicationController
     @message = @channel.text_messages.new(params[:message])
     @message.user = current_user
     @message.save!
+    @message = MessageDecorator.decorate @message
+    
     respond_with @message, location: @channel
   end
 
   private
 
   def find_channel!
-    @channel = Channel.find(params[:channel_id])
+    @channel = ChannelDecorator.find(params[:channel_id])
   end
 end

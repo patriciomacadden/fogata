@@ -1,4 +1,7 @@
 <div class="text-message boxed-item">
+  <div class="gravatar">
+    <%= image_tag gravatar_url(text_message.user.email, 38), class: 'img-rounded' %>
+  </div>
   <div class="info">
     <div class="left">
       <strong><%= text_message.user.first_name %></strong>
@@ -7,7 +10,7 @@
       <span class="muted"><%=l text_message.created_at, format: :short %></span>
     </div>
   </div>
-  <div class="text_message">
+  <div class="text">
     <%= text_message.text %>
   </div>
 </div>

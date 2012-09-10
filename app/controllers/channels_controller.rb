@@ -5,7 +5,7 @@ class ChannelsController < ApplicationController
   # GET /channels
   # GET /channels.json
   def index
-    @channels = Channel.all
+    @channels = ChannelDecorator.all
 
     respond_with @channels
   end
@@ -13,7 +13,7 @@ class ChannelsController < ApplicationController
   # GET /channels/channel-1
   # GET /channels/channel-1.json
   def show
-    @channel = Channel.find(params[:id])
+    @channel = ChannelDecorator.find(params[:id])
     @message = Message.new
 
     respond_with @channel
@@ -65,9 +65,10 @@ class ChannelsController < ApplicationController
   # PUT /channels/channel-1/change_current_topic
   # PUT /channels/channel-1/change_current_topic.json
   def change_current_topic
-    @channel = Channel.find(params[:id])
+    @channel = ChannelDecorator.find(params[:id])
     @channel.update_attributes(params[:channel])
     @message = @channel.current_topic_change_messages.create text: @channel.current_topic, user: current_user
+    @message = MessageDecorator.decorate @message
 
     respond_with @channel
   end

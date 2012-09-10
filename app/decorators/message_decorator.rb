@@ -29,4 +29,8 @@ class MessageDecorator < Draper::Base
   #     h.content_tag :span, attributes["created_at"].strftime("%a %m/%d/%y"),
   #                   :class => 'timestamp'
   #   end
+
+  def text
+    h.emojize(h.replace_urls(message.text)).html_safe
+  end
 end
