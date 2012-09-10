@@ -1,4 +1,6 @@
 $('#change-topic').modal('hide');
-$('#current-topic').html('<%= @channel.current_topic.present? ? @channel.current_topic : t('views.channels.without_current_topic') %>');
-$('.messages').append('<%=j render(@message) %>');
-scrollToBottom();
+<% publish_to change_current_topic_channel_path(@channel) do %>
+  $('#current-topic').html('<%= @channel.current_topic.present? ? @channel.current_topic : t('views.channels.without_current_topic') %>');
+  $('.messages').append('<%=j render(@message) %>');
+  scrollToBottom();
+<% end %>
