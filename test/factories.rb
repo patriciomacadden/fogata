@@ -11,6 +11,11 @@ FactoryGirl.define do
     user
   end
 
+  factory :online do
+    channel
+    user
+  end
+
   factory :user do
     sequence(:email) { |n| "user#{n}@gmail.com" }
     sequence(:first_name) { |n| "Name #{n}" }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909204539) do
+ActiveRecord::Schema.define(:version => 20120911020610) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(:version => 20120909204539) do
 
   add_index "messages", ["channel_id"], :name => "index_messages_on_channel_id"
   add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
+
+  create_table "onlines", :force => true do |t|
+    t.integer  "channel_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "onlines", ["channel_id"], :name => "index_onlines_on_channel_id"
+  add_index "onlines", ["user_id"], :name => "index_onlines_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "provider"
