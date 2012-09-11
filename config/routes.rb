@@ -1,4 +1,4 @@
-SmokeSignals::Application.routes.draw do
+Fogata::Application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'sign_out', to: 'sessions#destroy', as: 'sign_out'
   

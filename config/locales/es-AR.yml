@@ -24,7 +24,7 @@ es-AR:
 
   views:
     application:
-      smoke_signals: Smoke Signals
+      fogata: Fogata
 
     channels:
       change_topic: Cambiar tema

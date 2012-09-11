@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SmokeSignals::Application.load_tasks
+Fogata::Application.load_tasks
