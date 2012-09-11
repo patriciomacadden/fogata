@@ -32,6 +32,6 @@ class ChannelDecorator < Draper::Base
   #   end
 
   def current_topic
-    h.emojize(h.replace_urls(channel.current_topic)).html_safe
+    h.emojize(h.replace_urls(channel.current_topic)).html_safe if channel.current_topic.present?
   end
 end
