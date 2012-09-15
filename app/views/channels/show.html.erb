@@ -14,3 +14,7 @@
 
 <%= subscribe_to channel_path(@channel) %>
 <%= subscribe_to change_current_topic_channel_path(@channel) %>
+<%= subscribe_to im_online_channel_path(@channel) %>
+<script>
+  imOnline('<%= im_online_channel_path(@channel) %>');
+</script>

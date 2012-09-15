@@ -88,4 +88,12 @@ class ChannelsControllerTest < ActionController::TestCase
     put :change_current_topic, id: @channel, channel: { current_topic: 'A new topic' }, format: :js
     assert_response :success
   end
+  
+  test "should say i'm online" do
+    assert_difference('Online.count') do
+      put :im_online, id: @channel, format: :js
+    end
+    
+    assert_response :success
+  end
 end

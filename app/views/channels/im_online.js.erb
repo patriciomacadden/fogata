@@ -1,0 +1,9 @@
+<%= publish_to im_online_channel_path(@channel) do %>
+  $('#online-users li').detach();
+  <% @channel.online_users.order('first_name ASC').each do |user| %>
+    if ($('#online-users li#user-<%= user.id %>').size() == 0)
+    {
+      $('#online-users').append("<%=j render(partial: 'users/online_user', object: user, as: 'user') %>");
+    }
+  <% end %>
+<% end %>

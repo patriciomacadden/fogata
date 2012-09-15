@@ -11,3 +11,16 @@
 {
   margin-bottom: 110px;
 }
+
+.nav-list
+{
+  ul#online-users
+  {
+    margin: 0;
+    
+    li.online-user
+    {
+      list-style: none;
+    }
+  }
+}

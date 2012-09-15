@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   # associations
   has_many :channels
   has_many :messages
+  has_many :onlines
+  has_many :online_channels, through: :onlines, source: :channel
 
   # validations
   validates :email, presence: true

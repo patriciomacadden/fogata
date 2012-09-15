@@ -7,6 +7,7 @@ Fogata::Application.routes.draw do
     
     member do
       put 'change_current_topic'
+      put 'im_online'
     end
   end
   

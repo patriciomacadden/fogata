@@ -72,4 +72,16 @@ class ChannelsController < ApplicationController
 
     respond_with @channel
   end
+  
+  # PUT /channels/channel-1/im_online
+  # PUT /channels/channel-1/im_online.json
+  def im_online
+    @channel = Channel.find(params[:id])
+
+    # delete all online users from the last 5 seconds
+    @channel.onlines.where('created_at <= ? or user_id = ?', 5.seconds.ago, current_user.id).delete_all
+
+    # add the current_user
+    @channel.online_users << current_user
+  end
 end
