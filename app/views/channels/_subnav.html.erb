@@ -1,0 +1,37 @@
+<div class="navbar navbar-fixed-top" style="margin-top: 40px; z-index: 1000;">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= @channel.name %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to t('views.scaffold.edit'), edit_channel_path(@channel) %></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span id="current-topic">
+              <%= @channel.current_topic.present? ? @channel.current_topic : t('views.channels.without_current_topic') %>
+            </span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to t('views.channels.change_topic'), '#change-topic', data: { toggle: 'modal' } %></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav pull-right" id="online-users">
+        <%= render partial: 'users/online_user', collection: @channel.online_users, as: 'user' %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal hide" id="change-topic">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h3><%=t 'views.channels.change_topic' %></h3>
+  </div>
+  <%= render 'change_current_topic_form' %>
+</div>

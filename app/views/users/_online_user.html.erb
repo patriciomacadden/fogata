@@ -1,1 +1,5 @@
-<li class="online-user" id="user-<%= user.id %>"><%= image_tag gravatar_url(user.email, 16), class: 'img-rounded', style: 'margin-top: -4px' %> <%= user.first_name %></li>
+<li class="online-user"><%= link_to image_tag(gravatar_url(user.email, 16), class: 'img-rounded', style: 'margin-top: -4px'), '#', rel: 'tooltip', data: { :'original-title' => user.first_name, placement: 'bottom' } %></li>
+<script>
+$('.tooltip').detach();
+$('a[rel=tooltip]').tooltip();
+</script>

@@ -12,15 +12,7 @@
   margin-bottom: 110px;
 }
 
-.nav-list
+li.online-user a
 {
-  ul#online-users
-  {
-    margin: 0;
-    
-    li.online-user
-    {
-      list-style: none;
-    }
-  }
+  padding: 10px 5px !important;
 }

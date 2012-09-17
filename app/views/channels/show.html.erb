@@ -1,16 +1,10 @@
-<div class="row">
-  <div class="span3">
-    <%= render 'sidebar' %>
-  </div>
+<%= render 'subnav' %>
 
-  <div class="span9">
-    <div class="messages">
-      <%= render @channel.messages %>
-    </div>
-
-    <%= render 'messages/form' %>
-  </div>
+<div class="messages">
+  <%= render @channel.messages %>
 </div>
+
+<%= render 'messages/form' %>
 
 <%= subscribe_to channel_path(@channel) %>
 <%= subscribe_to change_current_topic_channel_path(@channel) %>
@@ -18,3 +12,6 @@
 <script>
   imOnline('<%= im_online_channel_path(@channel) %>');
 </script>
+<style>
+  body { padding-top: 100px; }
+</style>
